@@ -48,40 +48,39 @@ export default function Navbar() {
       ">
 
         <a
-          href="#features"
-          className="
-            text-zinc-400
-            hover:text-white
-            transition
-          "
-        >
-          Features
-        </a>
+  href="#workers"
+  className="
+    text-zinc-400
+    hover:text-white
+    transition
+  "
+>
+  For Workers
+</a>
 
 
-        <a
-          href="#how-it-works"
-          className="
-            text-zinc-400
-            hover:text-white
-            transition
-          "
-        >
-          How it works
-        </a>
+<a
+  href="#companies"
+  className="
+    text-zinc-400
+    hover:text-white
+    transition
+  "
+>
+  For Companies
+</a>
 
 
-        <a
-          href="#pricing"
-          className="
-            text-zinc-400
-            hover:text-white
-            transition
-          "
-        >
-          Pricing
-        </a>
-
+<a
+  href="#how-it-works"
+  className="
+    text-zinc-400
+    hover:text-white
+    transition
+  "
+>
+  How It Works
+</a>
       </div>
 
 
