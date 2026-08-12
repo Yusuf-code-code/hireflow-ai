@@ -2,9 +2,8 @@ import { useState } from "react";
 import Button from "../../components/ui/Button";
 import { useNavigate } from "react-router-dom";
 
-
-export default function CompanySignup() {
-const navigate = useNavigate();
+export default function WorkerSignup() {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -17,43 +16,26 @@ const navigate = useNavigate();
             </p>
 
             <h1 className="text-4xl font-bold tracking-tight">
-              Create your company account
+              Create your account
             </h1>
 
             <p className="mt-3 text-zinc-400">
-              Start finding people who actually fit your needs.
+              Start building your professional profile.
             </p>
           </div>
 
           <form className="space-y-5"
-          onSubmit={(event)=> {
+          onSubmit={(event)=>{
             event.preventDefault();
-            navigate("/company/onboarding")
+            navigate("/worker/onboarding")
           }}
           >
-            <div>
-              <label
-                htmlFor="companyName"
-                className="mb-2 block text-sm font-medium text-zinc-200"
-              >
-                Company name
-              </label>
-
-              <input
-                id="companyName"
-                name="companyName"
-                type="text"
-                placeholder="Your company name"
-                className="h-12 w-full rounded-lg border border-zinc-800 bg-zinc-950 px-4 text-white outline-none transition focus:border-zinc-500"
-              />
-            </div>
-
             <div>
               <label
                 htmlFor="name"
                 className="mb-2 block text-sm font-medium text-zinc-200"
               >
-                Your name
+                Full name
               </label>
 
               <input
@@ -70,14 +52,14 @@ const navigate = useNavigate();
                 htmlFor="email"
                 className="mb-2 block text-sm font-medium text-zinc-200"
               >
-                Work email
+                Email
               </label>
 
               <input
                 id="email"
                 name="email"
                 type="email"
-                placeholder="you@company.com"
+                placeholder="you@example.com"
                 className="h-12 w-full rounded-lg border border-zinc-800 bg-zinc-950 px-4 text-white outline-none transition focus:border-zinc-500"
               />
             </div>
@@ -119,7 +101,7 @@ const navigate = useNavigate();
 
               <input
                 id="confirmPassword"
-               name="confirmPassword"
+                name="confirmPassword"
                 type="password"
                 placeholder="Confirm your password"
                 className="h-12 w-full rounded-lg border border-zinc-800 bg-zinc-950 px-4 text-white outline-none transition focus:border-zinc-500"
@@ -127,7 +109,7 @@ const navigate = useNavigate();
             </div>
 
             <Button type="submit" className="mt-3 w-full" size="md">
-              Create company account
+              Create account
             </Button>
           </form>
 

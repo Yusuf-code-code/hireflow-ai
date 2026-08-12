@@ -5,12 +5,14 @@ interface RoleCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
+  onClick: () => void;
 }
 
 export default function RoleCard({
   icon,
   title,
   description,
+  onClick,
 }: RoleCardProps) {
   return (
         <motion.div
@@ -18,6 +20,7 @@ export default function RoleCard({
       animate={{ opacity: 1, y: 0 }}
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
+       onClick={onClick}
       className="flex h-full flex-col py-6"
     >
     <div className="flex h-full flex-col rounded-xl border border-zinc-800 bg-zinc-950 p-10">
@@ -35,7 +38,10 @@ export default function RoleCard({
         </p>
       </div>
 
-      <Button className="mt-10 px-8" size="md">
+      <Button className="mt-10 px-8" size="md"   onClick={(event) => {
+          event.stopPropagation();
+          onClick();
+        }}>
         Continue
       </Button>
     </div>
