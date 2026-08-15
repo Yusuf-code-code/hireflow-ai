@@ -2,8 +2,10 @@ import { useState } from "react";
 import Button from "../../components/ui/Button";
 import { workerQuestions } from "../../data/workerQuestions";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function WorkerOnboarding() {
+  const navigate = useNavigate();
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const [answers, setAnswers] = useState<Record<string, string[]>>({});
@@ -65,7 +67,10 @@ const handleAnswer = (option: string) => {
   const handleContinue = () => {
     if (currentQuestion < workerQuestions.length - 1) {
       setCurrentQuestion((previous) => previous + 1);
+      return
     }
+      navigate("/worker/assessment")
+
   };
 
   return (
@@ -128,6 +133,7 @@ const handleAnswer = (option: string) => {
             key={option}
             type="button"
             onClick={() => handleAnswer(option)}
+            
             className={`rounded-xl border p-5 text-left transition-all duration-200 ${
               selected
                 ? "border-white bg-white text-black"
@@ -159,6 +165,7 @@ const handleAnswer = (option: string) => {
     size="md"
     disabled={selectedAnswers.length === 0}
     onClick={handleContinue}
+   
   >
     Continue
   </Button>

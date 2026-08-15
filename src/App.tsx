@@ -7,6 +7,7 @@ import WorkerSignUp from "./pages/auth/WorkerSignUp";
 import CompanySignup from "./pages/auth/CompanySignUp"
 import CompanyOnboarding from "./pages/auth/CompanyOnboarding"
 import WorkerOnboarding from "./pages/auth/WorkerOnboarding"
+import WorkStyleAssessment from "./pages/auth/WorkStyleAssesment"
 
 
 
@@ -21,6 +22,7 @@ function App() {
     <Route path="/choose-role" element={<RoleSelection/>} />
     <Route path="/dashboard" element={<Dashboard/>} />
     <Route path="/worker/signup" element={<WorkerSignUp/>}/>
+    <Route path="/worker/assessment" element={<WorkStyleAssessment/>}/>
     <Route path="/company/signup" element={<CompanySignup/>}/>
     <Route path="/worker/onboarding" element={<WorkerOnboarding/>}/>
     <Route path="/company/onboarding" element={<CompanyOnboarding/>}/>
