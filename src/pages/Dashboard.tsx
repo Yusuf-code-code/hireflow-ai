@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getWorkStyleLabel } from "../lib/workstyle";
+import { getWorkStyleLabel } from "../lib/workStyle";
 export default function Dashboard() {
   const [scores, setScores] = useState({
   collaboration: 0,

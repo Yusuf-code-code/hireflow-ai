@@ -8,6 +8,7 @@ import CompanySignup from "./pages/auth/CompanySignUp"
 import CompanyOnboarding from "./pages/auth/CompanyOnboarding"
 import WorkerOnboarding from "./pages/auth/WorkerOnboarding"
 import WorkStyleAssessment from "./pages/auth/WorkStyleAssesment"
+import CompanyDashboard from "./pages/CompanyDashboard"
 
 
 
@@ -24,6 +25,7 @@ function App() {
     <Route path="/worker/signup" element={<WorkerSignUp/>}/>
     <Route path="/worker/assessment" element={<WorkStyleAssessment/>}/>
     <Route path="/company/signup" element={<CompanySignup/>}/>
+    <Route path="/company/dashboard" element={<CompanyDashboard/>}/>
     <Route path="/worker/onboarding" element={<WorkerOnboarding/>}/>
     <Route path="/company/onboarding" element={<CompanyOnboarding/>}/>
     </Routes>
